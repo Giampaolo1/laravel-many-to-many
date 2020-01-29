@@ -25,9 +25,8 @@ class AddForeignKey extends Migration
         // in mezzo metti la FK
         $table -> foreign('task_id', 'employee_task_task_id')
                 -> references('id')
-                -> on('task');
+                -> on('tasks');
       });
-
     }
 
     /**
@@ -45,5 +44,6 @@ class AddForeignKey extends Migration
         $table -> dropColumn("employee_id");
         $table -> dropColumn("task_id");
 
-    });
+      });
+    }
 }
