@@ -13,11 +13,11 @@ class EmployeeSeeder extends Seeder
      */
     public function run()
     {
-        factory(Employee::class, 100)
+        factory(Employee::class, 20)
           -> create()
           -> each(function($employee) {
 
-          $tasks = Task::inRandomOrder() -> take(3) -> get();
+          $tasks = Task::inRandomOrder() -> take(rand(1,3)) -> get();
           $employee -> tasks() -> attach($tasks);
         });
     }

@@ -7,11 +7,13 @@
   </head>
   <body>
     <header>
-      header
+      HEADER
+      <br>
+      <a href="{{route("employee.create")}}">CREATE NEW Employee</a>
     </header>
       @yield('content')
     <footer>
-      footer
+      FOOTER
     </footer>
   </body>
 </html>
